@@ -52,14 +52,16 @@ button {
     color: var(--color-on-surface-variant);
     }
 
+.footer-copyright-attribution a {
+    color: hsl(228, 45%, 44%);
+    }
+
 /* #endregion */
+
+
 
 .footer-copyright-attribution
 {
     font-size: 11px;
     text-align: center;
-}
-.footer-copyright-attribution a
-{
-    color: hsl(228, 45%, 44%);
 }
