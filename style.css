@@ -1,0 +1,65 @@
+
+/* #region COLORS & BACKGROUNDS */
+
+:root
+{
+    --color-background: white;
+    --color-surface: white;
+    --color-surface-variant: hsl(193, 100%, 96%);
+    --color-on-surface: hsl(208, 11%, 55%);
+    --color-on-surface-variant: hsl(192, 100%, 9%);
+    --color-primary: hsl(322, 100%, 66%);
+    --color-on-primary: white;
+    --color-secondary: hsl(192, 100%, 9%);
+    --color-on-secondary: white;
+}
+
+body {
+    background-color: var(--color-background);
+    }
+header {
+    background-color: var(--color-surface-variant);
+    color: var(--color-on-surface-variant);
+    }
+footer {
+    background-color: var(--color-secondary);
+    color: var(--color-on-secondary);
+    }
+button {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    }
+
+@media only screen and ( max-width: 500px ) {
+    .hero-space {
+        background-image: url("./images/bg-hero-mobile.svg");
+        }
+    }
+@media only screen and ( min-width: 500px ) {
+    .hero-space {
+        background-image: url("./images/bg-hero-desktop.svg");
+        }
+    }
+.hero-space h1 {
+    color: var(--color-on-surface-variant);
+    }
+
+.feature-card {
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    }
+.feature-card h2 {
+    color: var(--color-on-surface-variant);
+    }
+
+/* #endregion */
+
+.footer-copyright-attribution
+{
+    font-size: 11px;
+    text-align: center;
+}
+.footer-copyright-attribution a
+{
+    color: hsl(228, 45%, 44%);
+}
