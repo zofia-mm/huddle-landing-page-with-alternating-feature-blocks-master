@@ -407,6 +407,9 @@ header, footer {
 /* #endregion */
 
 /* #region features */
+.features {
+    margin-top: 10rem;
+    }
 .feature-card {
     display: flex;
     flex-direction: row-reverse;
@@ -414,7 +417,6 @@ header, footer {
     padding-left: 8rem;
     align-items: center;
     margin-bottom: 3rem;
-    margin-top: 10rem;
     justify-content: space-between;
     }
 .feature-card:nth-child(2n) {
