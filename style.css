@@ -21,6 +21,10 @@ header {
     background-color: var(--color-surface-variant);
     color: var(--color-on-surface-variant);
     }
+header button {
+    background-color: var(--color-on-secondary);
+    color: var(--color-secondary);
+    }
 footer {
     background-color: var(--color-secondary);
     color: var(--color-on-secondary);
@@ -40,7 +44,7 @@ button {
         background-image: url("./images/bg-hero-desktop.svg");
         }
     }
-.hero-space h1 {
+.hero-space {
     color: var(--color-on-surface-variant);
     }
 
@@ -58,10 +62,41 @@ button {
 
 /* #endregion */
 
+/* #region TYPOGRAPHY */
 
+@font-face {
+    font-family: Poppins;
+    src: url("./fonts/Poppins/Poppins-Regular.ttf");
+    }
+@font-face {
+    font-family: OpenSans;
+    src: url("./fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+    }
 
-.footer-copyright-attribution
-{
+body {
+    font-family: "OpenSans";
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    }
+footer {
+    text-align: left;
+    }
+button {
+    font-family: "OpenSans";
+    font-weight: 700;
+    }
+
+h1, h2 {
+    font-family: "Poppins";
+    font-weight: 600;
+    text-align: center;
+    }
+
+.footer-copyright-attribution {
     font-size: 11px;
     text-align: center;
-}
+    }
+
+/* #endregion */
+
