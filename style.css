@@ -21,52 +21,74 @@ header {
     background-color: var(--color-surface-variant);
     color: var(--color-on-surface-variant);
     }
-header button {
-    background-color: var(--color-on-secondary);
-    color: var(--color-secondary);
+@media only screen and ( max-width: 500px ) {
+    header {
+        background-image: url("./images/bg-hero-mobile.svg");
+        }
+    }
+@media only screen and ( min-width: 500px ) {
+    header {
+        background-image: url("./images/bg-hero-desktop.svg");
+        }
     }
 footer {
     background-color: var(--color-secondary);
     color: var(--color-on-secondary);
     }
+
 button {
+    box-shadow: 0px 0px 10px lightgray;
+    border-style: none;
     background-color: var(--color-primary);
     color: var(--color-on-primary);
     }
+button.header-button-try {
+    background-color: var(--color-on-secondary);
+    color: var(--color-secondary);
+    }
+main button:hover {
+    filter: grayscale(50%) brightness(150%);
+    }
+header button:hover {
+    color: var(--color-on-surface);
+    }
 
-@media only screen and ( max-width: 500px ) {
-    .hero-space {
-        background-image: url("./images/bg-hero-mobile.svg");
-        }
-    }
-@media only screen and ( min-width: 500px ) {
-    .hero-space {
-        background-image: url("./images/bg-hero-desktop.svg");
-        }
-    }
 .hero-space {
+    background-size: cover;
     color: var(--color-on-surface-variant);
     }
 
 .feature-card {
     background-color: var(--color-surface);
     color: var(--color-on-surface);
+    box-shadow: 0px 0px 10px hsl(204, 8%, 90%);
     }
 .feature-card h2 {
     color: var(--color-on-surface-variant);
     }
 
+.cta-card {
+    background-color: var(--color-surface);
+    box-shadow: 0px 0px 10px hsl(204, 8%, 90%);
+    }
+.cta-card-background-sliver {
+    background-color: var(--color-secondary);
+    }
+
 .footer-copyright-attribution a {
     color: hsl(228, 45%, 44%);
+    }
+.footer-logo {
+    filter: brightness(0) invert(1);
     }
 
 /* #endregion */
 
-/* #region TYPOGRAPHY */
+/* #region TYPOGRAPHY MOBILE */
 
 @font-face {
     font-family: Poppins;
-    src: url("./fonts/Poppins/Poppins-Regular.ttf");
+    src: url("./fonts/Poppins/Poppins-Medium.ttf");
     }
 @font-face {
     font-family: OpenSans;
@@ -76,23 +98,46 @@ button {
 body {
     font-family: "OpenSans";
     font-weight: 400;
-    font-size: 18px;
+    font-size: 14px;
     text-align: center;
+    line-height: 150%;
+    }
+.hero-space {
+    font-size: 16px;
+    line-height: 150%;
     }
 footer {
     text-align: left;
+    font-size: 18px;
+    font-weight: 300;
     }
 button {
     font-family: "OpenSans";
     font-weight: 700;
+    font-size: 12px;
     }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: "Poppins";
     font-weight: 600;
     text-align: center;
+    line-height: 150%;
+    }
+h1 {
+    font-size: 24px;
+    }
+h2 {
+    font-size: 20px;
+    }
+h3 {
+    font-size: 18px;
     }
 
+.footer-info-text {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 160%;
+    }
 .footer-copyright-attribution {
     font-size: 11px;
     text-align: center;
@@ -100,3 +145,197 @@ h1, h2 {
 
 /* #endregion */
 
+@media only screen and ( min-width: 501px ) {
+/* #region TYPOGRAPHY DESKTOP */
+
+header button {
+    font-size: 15px;
+    }
+
+/* #endregion */
+}
+
+/* #region PLACEMENT MOBILE */
+
+body { margin: 0; }
+footer { padding: 20px; margin: 0; }
+
+/* #region buttons */
+button {
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    padding-right: 3.7rem;
+    padding-left: 3.7rem;
+    }
+button.header-button-try {
+    height: 1.7rem;
+    border-radius: 0.85rem;
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+    }
+/* #endregion */
+
+/* #region header */
+.header 
+{
+    height: 100vh;
+}
+.header-top
+{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    top: 0;
+}
+.header-logo-container {
+    width: 7rem;
+    }
+.header-logo {
+    width: 100%;
+    }
+/* #endregion */
+
+/* #region hero space */
+.hero-space
+{
+    padding: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hero-space-button-get-started {
+    margin-top: 18px;
+    margin-bottom: 56px;
+    }
+.hero-space-image-container {
+    width: 100%;
+    }
+.hero-space-image {
+    width: 100%;
+    object-fit: cover;
+    }
+/* #endregion */
+
+/* #region feature card */
+.feature-image-container {
+    width: 100%;
+    }
+.feature-image {
+    width: 100%;
+    object-fit: cover;
+    }
+.feature-card {
+    margin: 20px;
+    margin-bottom: 50px;
+    padding: 40px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    }
+.feature-card div:first-child {
+    margin-block-end: 50px;
+    }
+.features {
+    margin-top: 64px;
+    margin-bottom: 128px;
+    }
+/* #endregion */
+
+/* #region bottom cta */
+.cta-card {
+    padding: 20px;
+    padding-bottom: 40px;
+    margin: 10px;
+    margin-bottom: -70px;
+    border-radius: 20px;
+    z-index: 1;
+    }
+.cta-card :first-child {
+    margin-bottom: 24px;
+    }
+.cta-card-background-sliver {
+    position: relative;
+    height: 120px;
+    width: 100%;
+    z-index: -1;
+    }
+/* #endregion */
+
+/* #region footer */
+.footer-logo {
+    width: 50%;
+    }
+.footer-info-list {
+    margin-bottom: 64px;
+    }
+.footer-info-item {
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    }
+.footer-info-icon-container {
+    width: 12%;
+    padding-top: 5px;
+    }
+.footer-info-text {
+    width: 80%;
+    padding-right: 8%;
+    }
+.footer-navigation {
+    margin-bottom: 64px;
+    }
+.footer-navigation-item {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    }
+.footer-socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+.footer-social-item {
+    margin-left: 8px;
+    margin-right: 8px;
+    }
+.footer-social-icon {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+    }
+/* #endregion */
+
+/* #endregion */
+
+@media only screen and ( min-width: 501px ) {
+/* #region PLACEMENT DESKTOP */
+
+/* #region header */
+header {
+    padding: 8vh 10vh;
+    }
+.header-logo {
+    width: 24vh;
+    }
+header button {
+    height: 3rem;
+    border-radius: 1.5rem;
+    padding: 0 4rem;
+    }
+/* #endregion */
+
+/* #region hero space */
+.hero-space {
+    flex-direction: row;
+    }
+/* #endregion */
+
+/* #region  */
+/* #endregion */
+
+/* #endregion */
+}
