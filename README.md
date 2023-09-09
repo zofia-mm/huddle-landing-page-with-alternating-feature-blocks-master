@@ -16,7 +16,7 @@ Users should be able to:
 
 ### Solution
 
-See the [design in action](https://fobya7.github.io/huddle-landing-page-with-alternating-feature-blocks-master/)!
+See the [design in action](https://zofia-mm.github.io/huddle-landing-page-with-alternating-feature-blocks-master/)!
 
 That's how it looks on desktop:
 ![](./readme/design-desktop.png)
